@@ -59,3 +59,50 @@ A quick reference to essential Linux commands for system information, user ident
 - `/etc/os-release` identifies the Linux distribution.
 - `uname` provides kernel-related information.
 - `ping`, `curl`, and `wget` serve different networking purposes.
+
+### RPM (Red Hat Package Manager)
+
+RPM is a low-level package management tool used in Red Hat-based Linux distributions.
+
+It works with `.rpm` package files and can install, query, upgrade, and remove packages.
+
+**Important RPM Commands**
+
+| Command | Purpose |
+|---|---|
+| `rpm -ivh package.rpm` | Install an RPM package |
+| `rpm -e package_name` | Remove an installed package |
+| `rpm -qa` | List all installed RPM packages |
+| `rpm -q package_name` | Check whether a package is installed |
+
+### DNF (Dandified YUM)
+
+DNF is a high-level package manager used in Red Hat-based Linux distributions.
+
+It downloads packages from repositories and automatically handles dependencies.
+
+**Important DNF Commands**
+
+| Command | Purpose |
+|---|---|
+| `sudo dnf install package_name` | Install a package |
+| `sudo dnf remove package_name` | Remove a package |
+| `dnf list installed` | List all installed packages |
+| `dnf list installed package_name` | Check whether a specific package is installed |
+| `sudo dnf upgrade` | Update installed packages |
+
+### RPM vs DNF
+
+| RPM | DNF |
+|---|---|
+| Low-level package management tool | High-level package manager |
+| Works with local `.rpm` files | Downloads packages from repositories |
+| Does not automatically resolve dependencies | Automatically resolves dependencies |
+| Useful for direct package operations | Useful for everyday software management |
+
+**Real-world analogy:**
+
+- RPM is like manually installing software using an installation file.
+- DNF is like an app store that downloads software and handles its requirements automatically.
+
+**Remember:** DNF uses RPM underneath to manage `.rpm` packages.
